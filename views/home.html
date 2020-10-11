@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jscharting.com/latest/jscharting.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="socket.io/socket.io.js" defer></script>
+    <script src="./js/home.js" defer></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+<body>
+    
+  <div class="container">
+      <div class="jumbotron image">
+        <h1>CSV to MONGODB</h1><br>
+        <p>Upload Your <b>.csv</b> File To Your <b>MONGODB</b> Database By Connection URL</p>
+      </div>
+    <form action="/upload" method="POST" enctype="multipart/form-data" id="fileform">
+          <input type="file" name="filename" accept=".csv" class="filedata form-control-file">
+          <input type="text" name="ui" class="url" placeholder="Add your MONGODB URL Example:- mongodb://localhost/CSV"> </br>
+          <button type="submit">Submit</button>
+       </form>
+
+       <!-- <form id="url">
+        <input id="urlfield" type="text" name="URL" class="url" placeholder="Add your MONGODB URL Example:- mongodb://localhost/CSV"> </br>
+        <button  id="url_button">Send URL</button>
+       </form> -->
+       <p>It will take some time. Speed of your online database affects the speed of uploading..... </p>
+       <div class="output_detail">
+        <p>Waiting for you file</p>
+      </div>
+  </div>
+  
+  
+    <!-- Place this code where you'd like the game to appear -->
+
+<!-- Insert this code before your </body> tag -->
+<script src="//static.miniclipcdn.com/js/game-embed.js"></script>
+</body>
+</html>
